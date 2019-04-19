@@ -4,6 +4,6 @@
 echo "hello world"
 #add line grab pid from process name
 #pid= ps -e -T | sed -n '2 p'
-pid= ps -e -T | grep "2519" | wc -l #counts the number of lines with the given pid
-#pid=10
-echo $pid
+pid=1943
+threadcount= ps -e -T | grep "$pid" | wc -l #counts the number of lines with the given pid
+echo $threadcount

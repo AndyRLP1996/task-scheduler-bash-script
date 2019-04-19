@@ -20,6 +20,6 @@ if [[ threadcount < maxthreadcount ]]; then
     #will need to make changes to run from different directory
     #grab jobs and pipe into handler
     origindir= /coding/test/environment/uploader/public/uploads
-    destdir= /coding/bash/dropoff
+    destdir= /coding/dropoff
     
 fi

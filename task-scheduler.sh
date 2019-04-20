@@ -6,8 +6,6 @@ echo "hello world"
 
 #maxthreadcount=20 #pick some arbitrary number for now
 
-#add line grab pid from process name
-
 pid=1943 #temporary
 #pid= pidof -s handler
 
@@ -15,11 +13,18 @@ threadcount= ps -e -T | grep "$pid" | wc -l #counts the number of lines with the
 
 echo $threadcount
 
-if [[ threadcount < maxthreadcount ]]; then
+if [[ threadcount < maxthreadcount ]]; then #add condition of folder not being empty
     #/coding/bash/task-scheduler.sh
     #will need to make changes to run from different directory
     #grab jobs and pipe into handler
-    origindir= /coding/test/environment/uploader/public/uploads
-    destdir= /coding/dropoff
+    origindir= coding/test/environment/uploader/public/uploads
+    destdir= coding/dropoff
     
+    cd  #move to home directory
+    temp= $threadcount
+    #put this part in a for loop
+
+        filename= ls -1 | sed -n 1p #grabs first line
+        mv $origindir/$filename $destdir
+
 fi

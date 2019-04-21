@@ -26,7 +26,7 @@ if [[ threadcount < maxthreadcount ]]; then #add condition of folder not being e
             mv $origindir/$filenumber/* $destdir
             #add code to drop task from database after moving 
             rmdir $origindir/$filenumber #deletes empty directory once folder moved
-
+            #add file to feed script to jobprocess here
         done
 fi
 echo "done \n"

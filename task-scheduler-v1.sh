@@ -12,7 +12,7 @@ threadcount= ps -e -T | grep "$pid" | wc -l #counts the number of lines with the
 
 echo $threadcount
 
-if [[ threadcount < maxthreadcount ]]; then #add condition of folder not being empty
+if [[ $threadcount < $maxthreadcount ]]; then #add condition of folder not being empty
     #/coding/bash/task-scheduler.sh
     #grab jobs and pipe into handler
     origindir= coding/test/environment/uploader/public/uploads/task/attachment

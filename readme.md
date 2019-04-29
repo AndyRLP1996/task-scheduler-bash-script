@@ -8,6 +8,8 @@ The crontab will also need to be changed to match the directory the script is ru
 The script is designed to be run on the same machine that the web app is hosted on.
 The size of the serial queue for each thread is specified in the variable `queuesize`
 
+timewaster is a simple program that takes a random amount of time to execute.
+
 FEATURES TO IMPLEMENT:
     -add sql query to drop task from webapp database before moving it
     -modify syntax for jobprocess submission
